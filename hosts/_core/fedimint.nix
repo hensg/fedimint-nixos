@@ -1,12 +1,18 @@
-{pkgs, ...}: let
-  fmFqdn = "hensg.dev";
+{
+  pkgs,
+  fmFqdn,
+  email,
+  ...
+}:
+let
   fmApiFqdn = "api.${fmFqdn}";
   fmP2pFqdn = "p2p.${fmFqdn}";
   fmAdminFqdn = "admin.${fmFqdn}";
-in {
-  security.acme.defaults.email = "wololo@hensg.dev";
+in
+{
+  security.acme.defaults.email = email;
   security.acme.acceptTerms = true;
-  users.extraUsers.fedimintd-mainnet.extraGroups = ["bitcoinrpc-public"];
+  users.extraUsers.fedimintd-mainnet.extraGroups = [ "bitcoinrpc-public" ];
 
   services.fedimintd."mainnet" = {
     enable = true;
@@ -72,15 +78,12 @@ in {
         root = pkgs.fedimint-ui;
       };
       locations."=/config.json" = {
-        alias =
-          pkgs.writeText "config.json"
-          ''
-            {
-                "fm_config_api": "wss://${fmApiFqdn}/ws/",
-                # FIXME: ToS that will be displayed to the Admin
-                "tos": "ToS "
-            }
-          '';
+        alias = pkgs.writeText "config.json" ''
+          {
+              "fm_config_api": "wss://${fmApiFqdn}/ws/",
+              "tos": "Terms of Service"
+          }
+        '';
       };
     };
   };

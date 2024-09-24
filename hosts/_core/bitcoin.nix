@@ -1,8 +1,10 @@
-{...}: let
-  operator = "henrique";
-  prune = 550;
-  dbCache = 2200;
-in {
+{
+  operator,
+  prune ? 1000,
+  dbCache ? 1000,
+  ...
+}:
+{
   nix-bitcoin = {
     generateSecrets = true;
     operator = {
