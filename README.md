@@ -1,6 +1,11 @@
-# Fedimint NixOS deployment on Hetzner
+# Fedimint NixOS Deployment on Hetzner
 
-This version runs with encrypted disk.
-Be aware that there is two different ports for `SSH`:
-1. -p 2222: secure boot ssh that unlock the disk whenever the system is restarted
-2. -p 22: normal ssh to the system
+### Security
+
+This deployment utilizes an encrypted disk for enhanced security. Please note that there are two distinct SSH ports available:
+- Port 2222: This port is used for secure boot SSH, which unlocks the disk during system restarts.
+- Port 22: This is the standard SSH port for accessing the system.
+
+Ensure you connect using the appropriate port based on your requirements.
+
+

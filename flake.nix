@@ -2,7 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     fedimint = {
-      url = "github:fedimint/fedimint?ref=refs/tags/v0.4.2";
+      url = "github:fedimint/fedimint?ref=refs/tags/v0.4.3-rc.2";
     };
     fedimint-ui = {
       url = "github:fedimint/ui?rev=b57151db3bc4afa373cd61d67b8677e0ba38ceeb";
@@ -68,7 +68,7 @@
             dbCache = 2000;
             prune = 5000;
 
-            # TODO: always encrypter for now, allow unencrypted too
+            # TODO: always encrypter for now, this does not work yet
             diskEncrypted = true;
           };
 
@@ -79,9 +79,6 @@
             disko.nixosModules.disko
 
             ./hosts/hetzner/vps/configuration.nix
-
-            # TODO:
-            # ./modules/prunednode-today
           ];
         };
       };
