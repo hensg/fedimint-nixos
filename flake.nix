@@ -4,7 +4,9 @@
 
     fedimint.url = "github:fedimint/fedimint?ref=refs/tags/v0.4.3";
 
-    #fedimint-ui.url = "github:fedimint/ui?rev=b57151db3bc4afa373cd61d67b8677e0ba38ceeb";
+    #fedimint-ui.url = "github:fedimint/ui?rev=b57151db3bc4afa373cd61d67b8677e0ba38ceeb"; 
+
+    # FIXME: use upstream
     fedimint-ui.url = "path:///home/henrique/Projects/fedimint-ui";
 
     nix-bitcoin.url = "github:fort-nix/nix-bitcoin/release";

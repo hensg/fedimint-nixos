@@ -40,6 +40,18 @@ just update user@ip hetzner
 If necessary, update the disk device in `hosts/hetzner/vps/encrypted-disks.nix`
 
 
+## DNS
+
+Here is my configuration for DNS records setup:
+
+| Type     | Host  | Value         |
+|----------|-------|---------------|
+| A Record | @     | [IP-REDACTED] |
+| A Record | admin | [IP-REDACTED] |
+| A Record | api   | [IP-REDACTED] |
+| A Record | p2p   | [IP-REDACTED] |
+
+
 ## Connecting guardians
 
 1. Go to the Admin URL: `https://$fmAdminFqdn` (e.g.: `https://admin.myhost/`).
