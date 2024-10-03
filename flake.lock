@@ -294,8 +294,8 @@
         "flake-utils": "flake-utils_10"
       },
       "locked": {
-        "lastModified": 1727961618,
-        "narHash": "sha256-faseWjGx4lrjDw8MWt6jRuC9CiXjN5Y2tA4MZN22LQ0=",
+        "lastModified": 1727965327,
+        "narHash": "sha256-48lAXwC5FYv/sKOr3hHYqNJ7zN2Ys2zuEjVm4/38uQQ=",
         "path": "/home/henrique/Projects/fedimint-ui",
         "type": "path"
       },
