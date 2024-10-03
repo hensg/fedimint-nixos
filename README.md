@@ -8,6 +8,7 @@ Requirements:
 This section provides a summary of how to install NixOS with Fedimint and Bitcoin on a Hetzner VPS.
 
 ### Formatting the Machine
+It uses the ssh-key from `hosts/_users/default.nix` as ssh password is disable.
 
 ```shell
 just format user@ip hetzner
