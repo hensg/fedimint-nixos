@@ -294,14 +294,18 @@
         "flake-utils": "flake-utils_10"
       },
       "locked": {
-        "lastModified": 1727965327,
-        "narHash": "sha256-48lAXwC5FYv/sKOr3hHYqNJ7zN2Ys2zuEjVm4/38uQQ=",
-        "path": "/home/henrique/Projects/fedimint-ui",
-        "type": "path"
+        "lastModified": 1727976606,
+        "narHash": "sha256-MFpdEaY9WqbweTfd/tRGhA6WqzNwTvbd1xsWbhqmbao=",
+        "owner": "fedimint",
+        "repo": "ui",
+        "rev": "25da5532737f7aa61a29a4ae394ae1bffc1fcd9b",
+        "type": "github"
       },
       "original": {
-        "path": "/home/henrique/Projects/fedimint-ui",
-        "type": "path"
+        "owner": "fedimint",
+        "repo": "ui",
+        "rev": "25da5532737f7aa61a29a4ae394ae1bffc1fcd9b",
+        "type": "github"
       }
     },
     "fedimint_2": {

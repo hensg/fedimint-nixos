@@ -15,7 +15,7 @@ just format user@ip hetzner
 ```
 This command uses nixos-anywhere to start the installation process. You will be prompted to enter a password to encrypt the disk.
 
-After the machine reboots for the installation, the disk will be locked and needs to be unlocked by entering the passphrase:
+After the machine reboots for the installation, the disk will be locked and needs to be unlocked by entering the passphrase after SSH into init boot:
 ```shell
 ssh -p 2222 user@ip
 ```
