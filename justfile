@@ -6,4 +6,4 @@ format USER_AT_HOST CONFIG:
 
 # Command to update the host
 update USER_AT_HOST CONFIG:
-    nixos-rebuild switch --option eval-cache false --flake .#{{CONFIG}} --target-host {{USER_AT_HOST}} --show-trace
+    nixos-rebuild switch --flake .#{{CONFIG}} --target-host {{USER_AT_HOST}}

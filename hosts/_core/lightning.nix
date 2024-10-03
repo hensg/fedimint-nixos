@@ -1,0 +1,4 @@
+{ ... }:
+{
+  services.clightning.enable = true;
+}

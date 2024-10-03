@@ -1,8 +1,7 @@
-{
-  lib,
-  modulesPath,
-  diskEncrypted ? true,
-  ...
+{ lib
+, modulesPath
+, diskEncrypted ? true
+, ...
 }:
 let
   authorizedKeys = builtins.attrValues (import ../../_users).users;

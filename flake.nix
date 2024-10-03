@@ -1,18 +1,14 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    fedimint = {
-      url = "github:fedimint/fedimint?ref=refs/tags/v0.4.3-rc.2";
-    };
-    fedimint-ui = {
-      url = "github:fedimint/ui?rev=b57151db3bc4afa373cd61d67b8677e0ba38ceeb";
-    };
-    nix-bitcoin = {
-      url = "github:fort-nix/nix-bitcoin/release";
-    };
-    disko = {
-      url = "github:nix-community/disko";
-    };
+
+    fedimint.url = "github:fedimint/fedimint?ref=refs/tags/v0.4.3";
+
+    #fedimint-ui.url = "github:fedimint/ui?rev=b57151db3bc4afa373cd61d67b8677e0ba38ceeb";
+    fedimint-ui.url = "path:///home/henrique/Projects/fedimint-ui";
+
+    nix-bitcoin.url = "github:fort-nix/nix-bitcoin/release";
+    disko.url = "github:nix-community/disko";
   };
 
   nixConfig = {
@@ -23,13 +19,12 @@
   };
 
   outputs =
-    {
-      nixpkgs,
-      disko,
-      fedimint,
-      fedimint-ui,
-      nix-bitcoin,
-      ...
+    { nixpkgs
+    , disko
+    , fedimint
+    , fedimint-ui
+    , nix-bitcoin
+    , ...
     }@inputs:
     let
       overlays = [
@@ -48,7 +43,7 @@
           registry = {
             nixpkgs.flake = nixpkgs;
           };
-          nixPath = [ "nixpkgs=${nixpkgs}" ];
+          nixPath = [ "nixpkgs = ${nixpkgs}" ];
         };
       };
     in

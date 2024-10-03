@@ -1,8 +1,7 @@
-{
-  pkgs,
-  fmFqdn,
-  email,
-  ...
+{ pkgs
+, fmFqdn
+, email
+, ...
 }:
 let
   fmApiFqdn = "api.${fmFqdn}";
@@ -22,15 +21,8 @@ in
       "RUST_BACKTRACE" = "1";
       "FM_REL_NOTES_ACK" = "0_4_xyz";
     };
-    api = {
-      address = "wss://${fmApiFqdn}/ws/";
-      bind = "127.0.0.1";
-    };
-    p2p = {
-      address = "fedimint://${fmP2pFqdn}:8173";
-      openFirewall = true;
-      bind = "0.0.0.0";
-    };
+    api.fqdn = fmApiFqdn;
+    p2p.fqdn = fmP2pFqdn;
     bitcoin = {
       network = "bitcoin";
       rpc = {
@@ -55,7 +47,9 @@ in
       locations."/ws/" = {
         proxyPass = "http://127.0.0.1:8174/";
         proxyWebsockets = true;
-        extraConfig = "proxy_pass_header Authorization;";
+        extraConfig = ''
+          proxy_pass_header Authorization;
+        '';
       };
       locations."= /meta.json" = {
         alias = "/var/www/meta.json";
@@ -80,8 +74,8 @@ in
       locations."=/config.json" = {
         alias = pkgs.writeText "config.json" ''
           {
-              "fm_config_api": "wss://${fmApiFqdn}/ws/",
-              "tos": "Terms of Service"
+            "fm_config_api": "wss://${fmApiFqdn}/ws/",
+            "tos": "Terms of Service"
           }
         '';
       };

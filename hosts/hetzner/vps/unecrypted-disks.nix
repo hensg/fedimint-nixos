@@ -1,6 +1,5 @@
-{
-  disks ? [ "/dev/sda" ],
-  ...
+{ disks ? [ "/dev/sda" ]
+, ...
 }:
 {
   disko.devices = {
