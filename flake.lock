@@ -226,11 +226,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1727872461,
-        "narHash": "sha256-4Pw3fVhN6xey5+2gUBm9nQJAjBqivffr+a5ZsXYjzJ8=",
+        "lastModified": 1727977578,
+        "narHash": "sha256-DBORKcmQ7ZjA4qE1MsnF1MmZSokOGrw4W9vTCioOv2U=",
         "owner": "nix-community",
         "repo": "disko",
-        "rev": "568727a884ae7cd9f266bd19aea655def8cafd78",
+        "rev": "574400001b3ffe555c7a21e0ff846230759be2ed",
         "type": "github"
       },
       "original": {
@@ -294,17 +294,17 @@
         "flake-utils": "flake-utils_10"
       },
       "locked": {
-        "lastModified": 1727976606,
-        "narHash": "sha256-MFpdEaY9WqbweTfd/tRGhA6WqzNwTvbd1xsWbhqmbao=",
+        "lastModified": 1727986063,
+        "narHash": "sha256-ZvTlUakYiuTF//QtyDvj3lY/1lTPgoO53q1gorFMYY8=",
         "owner": "fedimint",
         "repo": "ui",
-        "rev": "25da5532737f7aa61a29a4ae394ae1bffc1fcd9b",
+        "rev": "70c90a272e763a426965e79c5e8a830f27c23062",
         "type": "github"
       },
       "original": {
         "owner": "fedimint",
         "repo": "ui",
-        "rev": "25da5532737f7aa61a29a4ae394ae1bffc1fcd9b",
+        "rev": "70c90a272e763a426965e79c5e8a830f27c23062",
         "type": "github"
       }
     },

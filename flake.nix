@@ -2,7 +2,9 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     fedimint.url = "github:fedimint/fedimint?ref=refs/tags/v0.4.3";
-    fedimint-ui.url = "github:fedimint/ui?rev=25da5532737f7aa61a29a4ae394ae1bffc1fcd9b";
+    #fedimint-ui.url = "github:fedimint/ui?rev=b57151db3bc4afa373cd61d67b8677e0ba38ceeb"; 
+    #fedimint-ui.url = "path:///home/henrique/Projects/fedimint-ui";
+    fedimint-ui.url = "github:fedimint/ui?rev=70c90a272e763a426965e79c5e8a830f27c23062";
     nix-bitcoin.url = "github:fort-nix/nix-bitcoin/release";
     disko.url = "github:nix-community/disko";
   };
